@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/application.css">
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
-
-  <title></title>
+  <title>Google+ JavaScript Quickstart</title>
+  <!-- JavaScript specific to this application that is not related to API
+     calls -->
+  <script src="/js/application.js" ></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" ></script>
+  <meta name="google-signin-client_id" content="1077496871426-3qsdu7rsiqiqlrroda2odb5l59ii419m.apps.googleusercontent.com"></meta>
 </head>
 <body>
+  <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <a href="#" onclick="signOut();">Sign out</a> -->
   <%= yield %>
 </body>
 </html>
