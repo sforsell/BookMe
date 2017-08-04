@@ -22,12 +22,16 @@ require 'erb'
 require 'bcrypt'
 require 'pry'
 require 'pry-byebug'
+require 'open-uri'
+require 'json'
 
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
+BASE_URL = "https://www.googleapis.com/calendar/v3/freeBusy"
+SCHED_QUERY = '{"timeMin": "2017-08-03T00:00:00z","timeMax": "2017-08-23T00:00:00z","items": [{"id": "mskforsell@gmail.com"}]}'
 
 configure do
   # By default, Sinatra assumes that the root is the file that calls the configure block.
